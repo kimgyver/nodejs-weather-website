@@ -21,7 +21,12 @@ const forecast = ({ latitude, longitude }, callback) => {
           body.current.temperature +
           ' deegree out. It feels like ' +
           body.current.feelslike +
-          ' degree out.'
+          ' degree out. Humidity is ' +
+          body.current.humidity +
+          '%.' +
+          "<p><img src='" +
+          body.current.weather_icons[0] +
+          "'></p>"
       );
     }
   });
